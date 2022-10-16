@@ -24,6 +24,7 @@ Logos:
 - public/favicon.png
 - public/favicon.svg
 - src/components/Logo.astro
+
 are licensed under CC BY-NC-ND 4.0 read more in LOGOS-LICENSE
 
 Fira Code is under OFL
