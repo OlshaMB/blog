@@ -14,7 +14,7 @@ It's written using astro with markdown.
 1. As little js on the client as possible
 2. Posts are acceepted only throw email's
 3. Posts are private and are not published in the git
-4. If I ever change 3-rd policy posts will be published under `CC`
+4. If I ever change 3-rd policy posts will be published under `CC BY-NC-ND 4.0`
 5. This repo is under Apache-2.0 so you can't change it's sources or clone it and say it's yours now, but you can self host it. You can ask me to relicense it for you.
 
 ## Licenses
