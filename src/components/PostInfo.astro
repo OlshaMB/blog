@@ -1,0 +1,18 @@
+---
+import "../styles/components/PostInfo.css";
+import "./ui/small/card.astro";
+const title = Astro.props.title;
+const description:string = Astro.props.description ?? "   ";
+const url = Astro.props.url;
+const enforceContent = true;
+---
+{ enforceContent ? <details class="card post-info">
+    <summary><h2><a href={url}>{title}</a></h2></summary>
+    <p class="content">
+        {(description).slice(0,description.length-3)}<a href={url} class="read-more">{Astro.props.description && "… "}Read More</a>
+    </p>
+ </details> :
+ <div class="card post-info">
+    <div><h2><a href={url}>{title}</a></h2></div>
+</div>
+}

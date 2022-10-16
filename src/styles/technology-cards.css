@@ -1,0 +1,18 @@
+.typescript.letter{
+    color: #3178C6;
+    font-weight: 600;
+}
+.react{
+    color: #61DAFB;
+    background: #20232A;
+}
+.vite{
+    background: linear-gradient(140.44deg, #41D1FF -2.19%, #BD34FE 73.04%);
+}
+.vite .text {
+    background: linear-gradient(175.43deg, #FFEA83 4.15%, #FFDD35 10.99%, #FFA800 86.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}

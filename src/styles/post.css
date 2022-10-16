@@ -1,0 +1,15 @@
+.card {
+    padding: 20px;
+    margin: 20px;
+}
+
+.authors li {
+    list-style: none;
+}
+.authors ul {
+    margin: 0;
+    padding: 0;
+}
+section.authors {
+    margin-bottom: calc(28px + 20px);
+}

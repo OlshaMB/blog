@@ -1,0 +1,42 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Logo from "../components/Logo.astro";
+import CardsWithTitle from "../components/CardsWithTitle.astro";
+import Card from "../components/ui/small/card.astro";
+import "../styles/index.css"
+import "../styles/technology-cards.css";
+import Footer from "../components/Footer.astro";
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<BaseHead />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<Card classes="index-main-card">
+				<h1>Hi, I am OlshaMB!</h1>
+				<Logo size={5} showText={false} />
+				<p>
+					I love programming and my cat. This page is my blog. Here I write some posts about web technologes, my thoughts on design and other things.
+				</p>
+			</Card>
+			<CardsWithTitle classes="card-group">
+				<h2 slot="title" class="index-small-cards-title technology">I love using these technologes:</h2>
+				<Card classes="index-small-card index-technology-card"><div class="typescript letter">T</div>ype<div class="typescript letter">S</div>cript</Card>
+				<Card classes="index-small-card index-technology-card react">React</Card>
+				<Card classes="index-small-card index-technology-card vite"><div class="text">Vite</div></Card>
+			</CardsWithTitle>
+			<CardsWithTitle classes="card-group">
+				<h2 slot="title" class="index-small-cards-title project">My projects:</h2>
+				<Card classes="index-small-card index-project-card"><Logo size="0.7532"/>Blog</Card>
+				<Card classes="index-small-card index-project-card future"><Logo size="0.7532"/>Future Project</Card>
+				<Card classes="index-small-card index-project-card future"><Logo size="0.7532"/>Future Project</Card>
+			</CardsWithTitle>
+		</main>
+		<Footer />
+	</body>
+</html>

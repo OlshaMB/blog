@@ -1,0 +1,32 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import BaseHead from "../components/BaseHead.astro";
+import "../components/ui/small/card.astro";
+import "../styles/post.css";
+import "../styles/markdown.css"
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{Astro.props.headings.filter((heading:any)=>heading.depth==1)[0].text}</title>
+    <BaseHead/>
+</head>
+<body>
+    <Header/>
+    <main class="card post">
+        <slot/>
+    </main>
+    <section class="card authors">
+        <ul>
+            <li>Author: {Astro.props.frontmatter.author ?? "?"}</li>
+            <li>Editor: {Astro.props.frontmatter.editor ?? "?"}</li>
+            <li>Post Created: {Astro.props.frontmatter.pubDate ?? (new Date()).toString()}</li>
+        </ul>
+    </section>
+    <Footer/>
+</body>
+</html>

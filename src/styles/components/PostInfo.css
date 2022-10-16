@@ -1,0 +1,29 @@
+.post-info {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    /* padding: 20px !important; */
+    margin-bottom: 25px;
+}
+.post-info summary {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+details[open].post-info summary {
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+.post-info .content {
+    font-family: var(--font-sans);
+    font-family: var(--font-mono);
+    margin-top: 7px;
+}
+.post-info h2 a {
+    /*text-decoration: none;*/
+    text-decoration: 0.1em underline;
+}
+.post-info .read-more{
+    color: gray;
+    text-decoration: none;
+}

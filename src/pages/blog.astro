@@ -1,0 +1,51 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import PostInfo from "../components/PostInfo.astro";
+import Card from "../components/ui/small/card.astro";
+ // Use Astro.glob() to fetch all posts, and then sort them by date.
+ const posts = (await Astro.glob('./blog/*.md')).sort(
+ 	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+ );
+ 
+
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<BaseHead/>
+		<style>
+			main {
+				/* height: 100%; */
+				display: flex;
+    			flex-direction: column;
+    			align-items: center;
+				
+				margin: 20px 0;
+				padding: 0 183px;
+			}
+			body {
+    			background: #F5F5F5;
+			}
+			h1 {
+				font-size: 1.9em;
+			}
+		</style>
+
+	</head>
+	<body>
+		<Header/>
+		<main>
+			<div class="card" style="margin: 0; width:20%; text-align: center;"><h1>Posts:</h1></div>
+			{posts.map((post)=>{
+				//post.getHeadings().filter((heading)=>heading.depth==1)[0].text
+				return <PostInfo title={post.getHeadings().filter((heading)=>heading.depth==1)[0].text} url={post.url} description={post.frontmatter.description}/>;
+			})}
+			
+			
+		</main>
+		<Footer/>
+	</body>
+</html>

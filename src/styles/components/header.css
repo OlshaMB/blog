@@ -1,0 +1,19 @@
+header {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /*border: black dashed 1px;*/
+    margin: 0 23px;
+    background: white;
+    padding: 0 18px;
+    border-radius: 0 0 30px 30px;
+}
+header nav{
+    margin-right: 5px;
+}
+header nav a{
+    font-size: 1.5em;
+    color: #000;
+}

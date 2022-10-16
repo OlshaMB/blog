@@ -1,0 +1,70 @@
+body {
+    background: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.index-main-card {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: auto auto;
+    margin: 40px 0 85px 0;
+    max-width: 1204px;
+    width: 83%;
+    column-gap: 93px;
+    row-gap: 50px;
+    padding: 30px 34px;
+}
+.index-main-card h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    margin: 0;
+}
+.index-main-card p {
+    font-size: 35px;
+    margin: 0;
+}
+.index-main-card .logo {
+    grid-row: 2 span;
+}
+.card-group {
+    margin-bottom: 85px;
+}
+.index-small-card {
+    min-width: 314px;
+    min-height: 216px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+}
+.title {
+    width: max-content;
+    padding: 0;
+}
+.cards-with-title{
+    gap: 19px 26px;
+}
+.index-small-cards-title{
+    margin: 26px 0;
+    font-size: 35px;
+}
+.index-small-cards-title.technology {
+    margin: 26px 71px;
+}
+.index-small-cards-title.project{
+    margin: 26px 119px;
+}
+.index-technology-card {
+
+}
+.index-project-card.future{
+    width: max-content;
+}

@@ -1,0 +1,9 @@
+---
+import Card from "../components/ui/small/card.astro";
+import "../styles/components/CardsWithTitle.css"
+const showTitle = Astro.props.showTitle ?? true;
+---
+<div class={"cards-with-title"+(Astro.props.classes ? " " + Astro.props.classes : "")}>
+    {showTitle && <Card classes="title"><slot name="title"/></Card>}
+    <slot/>
+</div>

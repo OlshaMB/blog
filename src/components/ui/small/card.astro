@@ -1,0 +1,6 @@
+---
+import "../../../styles/components/ui/small/card.css"
+---
+<div class={"card"+(Astro.props.classes ? " " + Astro.props.classes : "")}>
+    <slot/>
+</div>

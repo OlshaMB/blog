@@ -1,0 +1,31 @@
+@font-face {
+    font-family: 'Fira Code';
+    font-display: swap;
+    src: url("/fonts/FiraCode/static/FiraCode-Regular.ttf") format('truetype');
+}
+:root {
+
+    /* Font styles */
+    --font-sans: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    --font-serif: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+    --font-mono: 'Fira Code', Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+}
+body {
+    font-family: var(--font-mono);
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+a {
+    color: #000;
+}
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-weight: 400;
+}
+p {
+    margin: 0;
+}
+body {
+    background: #F5F5F5;
+}

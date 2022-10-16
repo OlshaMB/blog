@@ -1,0 +1,14 @@
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    margin: 21px 0;
+}
+.logo .text {
+    font-family: var(--font-mono);
+}
+.logo a.text {
+    text-decoration: none;
+    color: #000;
+}
