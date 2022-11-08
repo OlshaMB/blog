@@ -10,15 +10,26 @@
     "astro": "astro"
   },
   "devDependencies": {
+    "@astrojs/image": "^0.11.1",
     "@astrojs/mdx": "^0.10.2",
-    "@astrojs/react": "^1.1.0",
+    "@astrojs/react": "^1.2.2",
     "@astrojs/rss": "^1.0.0",
     "@astrojs/sitemap": "^1.0.0",
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
     "astro": "^1.1.1",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "sharp": ">=0.31.0"
   },
   "dependencies": {
-    "remark-spoiler": "^1.0.6"
+    "@types/glob": "^8.0.0",
+    "astro-feather-icons": "^1.0.2",
+    "glob": "^8.0.3",
+    "glob-promise": "^5.0.0",
+    "react-photo-view": "^1.2.2",
+    "react-use": "^17.4.0",
+    "remark-spoiler": "^1.0.6",
+    "toml": "^3.0.0"
   }
 }

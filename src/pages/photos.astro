@@ -1,0 +1,62 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ImageCard from "../components/ImageCard";
+import Card from "../components/ui/small/card.astro";
+import "../styles/photos.css";
+import glob from "glob-promise";
+import { parse as toml } from "toml";
+import { readFileSync } from "fs";
+import ImageGalery from "./ImageGalery";
+import { parse } from "path";
+console.log(process.cwd());
+---
+
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <BaseHead />
+    </head>
+    <body>
+        <Header />
+        <main>
+            <Card><h1>My photos:</h1></Card>
+            
+                <ImageGalery client:visible imagesAndlabels={(
+                        await Promise.all(
+                            (
+                                await glob("public/photos/*.@(JPG|jpg|jpeg)")
+                            )
+                                .map((e) => {
+                                    let path = e
+                                        .replace(".jpeg", ".toml")
+                                        .replace(".jpg", ".toml")
+                                        .replace(".JPG", ".toml");
+                                    let filecontent:string="";
+                                    //readFileSync().toString()
+                                    try {
+                                        filecontent = readFileSync(path).toString()
+                                    } catch {
+
+                                    }
+                                    console.log(toml(filecontent).name as string)
+                                    return {
+                                        imagePath: e,
+                                        label: filecontent ? (toml(filecontent).name as string) : undefined,
+                                    };
+                                })
+                                .map(async ({ imagePath, label }) => {
+                                    return {
+                                        img: `<img alt=\"${label ?? "My photo"}\" src=\"${"/photos/preview/"+ parse(imagePath).name + "@250.jpeg"}\" loading="lazy"/>`,
+                                        realPath: imagePath,
+                                        label: (label ?? ""),
+                                    };
+                                })
+                        )
+                    )
+                }/>
+        </main>
+        <Footer/>
+    </body>
+</html>

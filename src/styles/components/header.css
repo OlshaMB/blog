@@ -16,4 +16,5 @@ header nav{
 header nav a{
     font-size: 1.5em;
     color: #000;
+    padding-left: 10px;
 }

@@ -1,0 +1,10 @@
+.image-card {
+    padding: 10px 20px;
+}
+.image-card .img {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 250px;
+    height: 250px;
+}

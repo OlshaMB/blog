@@ -11,13 +11,12 @@ main {
 }
 .index-main-card {
     display: grid;
-    grid-template-columns: 1fr min-content;
+    grid-template-columns: 1fr max-content;
     grid-template-rows: auto auto;
     margin: 40px 0 85px 0;
     max-width: 1204px;
     width: 83%;
-    column-gap: 93px;
-    row-gap: 50px;
+    row-gap: 30px;
     padding: 30px 34px;
 }
 .index-main-card h1 {
@@ -30,8 +29,11 @@ main {
     font-size: 35px;
     margin: 0;
 }
-.index-main-card .logo {
+.index-main-card .text {
     grid-row: 2 span;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .card-group {
     margin-bottom: 85px;
@@ -67,4 +69,24 @@ main {
 }
 .index-project-card.future{
     width: max-content;
+}
+.go-to-the-blog {
+    --max: max-content;
+    padding: 10px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    gap: 10px;
+    border: #000 3px solid;
+    border-radius: inherit;
+    text-decoration: none;
+    width: calc(var(--max) + 20px);
+    height: min-content;
+}
+.go-to-the-blog h2 {
+    font-size:35px;
+}
+.card-go-to-the-blog {
+    padding: 10px;
+    margin-bottom: 20px;
 }
